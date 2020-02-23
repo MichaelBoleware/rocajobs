@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1041,15 +1041,118 @@ const ESCAPE_LOOKUP={'&':'\\u0026','>':'\\u003e','<':'\\u003c','\u2028':'\\u2028
 
 /***/ }),
 
-/***/ 2:
+/***/ "./node_modules/next/document.js":
 /*!***************************************!*\
-  !*** multi next/dist/pages/_document ***!
+  !*** ./node_modules/next/document.js ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next/dist/pages/_document */"./node_modules/next/dist/pages/_document.js");
+module.exports = __webpack_require__(/*! ./dist/pages/_document */ "./node_modules/next/dist/pages/_document.js")
 
+
+/***/ }),
+
+/***/ "./pages/_document.js":
+/*!****************************!*\
+  !*** ./pages/_document.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MyDocument; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/document */ "./node_modules/next/document.js");
+/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var emotion_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! emotion-server */ "emotion-server");
+/* harmony import */ var emotion_server__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(emotion_server__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/core */ "@emotion/core");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_emotion_core__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
+  static getInitialProps({
+    renderPage
+  }) {
+    // for emotion-js
+    const page = renderPage();
+    const styles = Object(emotion_server__WEBPACK_IMPORTED_MODULE_2__["extractCritical"])(page.html);
+    return { ...page,
+      ...styles
+    };
+  }
+
+  constructor(props) {
+    // for emotion-js
+    super(props);
+    const {
+      __NEXT_DATA__,
+      ids
+    } = props;
+
+    if (ids) {
+      __NEXT_DATA__.ids = ids;
+    }
+  }
+
+  render() {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("html", {
+      lang: "en"
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("link", {
+      rel: "stylesheet",
+      href: "/_next/static/style.css"
+    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("meta", {
+      charSet: "utf-8"
+    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("meta", {
+      name: "viewport",
+      content: "initial-scale=1.0, width=device-width"
+    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("style", {
+      dangerouslySetInnerHTML: {
+        __html: this.props.css
+      }
+    })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("body", null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], null), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], null)));
+  }
+
+}
+
+/***/ }),
+
+/***/ 0:
+/*!*********************************************!*\
+  !*** multi private-next-pages/_document.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! private-next-pages/_document.js */"./pages/_document.js");
+
+
+/***/ }),
+
+/***/ "@emotion/core":
+/*!********************************!*\
+  !*** external "@emotion/core" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@emotion/core");
+
+/***/ }),
+
+/***/ "emotion-server":
+/*!*********************************!*\
+  !*** external "emotion-server" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("emotion-server");
 
 /***/ }),
 
