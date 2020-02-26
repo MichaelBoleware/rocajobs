@@ -32,7 +32,7 @@ export const headerCls = css`
   .menuCon .ant-menu-item {
     padding: 0px 5px;
     a {
-      color: #fff;
+      color: #ff3957;
     }
     &:hover {
       border-bottom: 2px solid transparent;
@@ -89,39 +89,5 @@ export const headerCls = css`
     top: auto;
     bottom: -6px;
   }
-  @media (max-width: 767px) {
-    .barsMenu {
-      display: inline-block;
-    }
-    .leftMenu,
-    .rightMenu {
-      display: none;
-    }
-    .logo a {
-      margin-left: -20px;
-    }
-    .menuCon .ant-menu-item,
-    .menuCon .ant-menu-submenu-title {
-      padding: 1px 20px;
-    }
-    .logo a {
-      padding: 10px 20px;
-    }
-  }
-`;
-export const drawerCls = css`
-  .ant-drawer-body {
-    padding: 0;
-  }
-  .ant-drawer-body .ant-menu-horizontal > .ant-menu-item,
-  .ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu {
-    display: inline-block;
-    width: 100%;
-  }
-  .ant-drawer-body .ant-menu-horizontal {
-    border-bottom: none;
-  }
-  .ant-drawer-body .ant-menu-horizontal > .ant-menu-item:hover {
-    border-bottom-color: transparent;
-  }
+
 `;

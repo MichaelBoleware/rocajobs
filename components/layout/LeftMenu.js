@@ -1,13 +1,24 @@
 import React from 'react';
-import { Menu } from 'antd';
-import Link from 'next/link';
+import algoliasearch from 'algoliasearch/lite';
+import {
+  InstantSearch,
+  Hits,
+  SearchBox,
+  Pagination,
+  Highlight,
+  ClearRefinements,
+  RefinementList,
+  Configure,
+} from 'react-instantsearch-dom';
+
+
+const searchClient = algoliasearch('B1G2GM9NG0', 'aadef574be1f9252bb48d4ea09b5cfe5');
 
 const LeftMenu = () => (
-  <Menu mode="horizontal">
-    <Menu.Item key="new_movies">
-      <Link href="new-movies">New Movies</Link>
-    </Menu.Item>
-  </Menu>
+  <div > 
+        
+      </div>
+
 );
 
 export default LeftMenu;
