@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 
 export const headerCls = css`
-  background-color: #04070b;
+background:linear-gradient(rgb(218,165,32),rgb(240,230,140));
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
   ul {
     background-color: #04070b;
@@ -58,36 +58,8 @@ export const headerCls = css`
   }
   .menuCon .rightMenu {
     float: right;
-  }
-  .barsMenu {
-    float: right;
-    height: 32px;
     padding: 6px;
     margin-top: 15px;
-    display: none;
-    background: none;
-    border: 1px solid #ff3957;
-  }
-  .barsBtn {
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: #ff3957;
-    position: relative;
-  }
-  .barsBtn:after,
-  .barsBtn:before {
-    content: attr(x);
-    width: 20px;
-    position: absolute;
-    top: -6px;
-    left: 0;
-    height: 2px;
-    background: #ff3957;
-  }
-  .barsBtn:after {
-    top: auto;
-    bottom: -6px;
   }
 
 `;

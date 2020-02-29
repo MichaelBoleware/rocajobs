@@ -8,12 +8,13 @@ import {headerCls} from './styles'
 import { css } from '@emotion/core';
 
 class Header extends Component {
+  
   render() {
     return (
       <div css={headerCls}>
         <nav className="menuBar">
           <div className="logo">
-            <Link href="/">
+            <Link href="/home">
               <img src="/images/logo.jpg" alt="logo" />
             </Link>
           </div>

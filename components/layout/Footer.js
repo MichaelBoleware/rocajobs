@@ -5,11 +5,12 @@ const footerCls = css`
  text-align: center;
  background: #04070b;
  color: #fff;
+ margin-top: 25px;
 `;
 const AppFooter = Layout.Footer;
 const Footer = () => (
  <AppFooter css={footerCls}>
-  Appbase.io ©2018 Created by Appbase Inc.
+  CSC 4101 - Group H - ROCA.sa Network
  </AppFooter>
 );
 export default Footer;

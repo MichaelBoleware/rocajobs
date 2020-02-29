@@ -12,7 +12,7 @@ const themeVariables = lessToJS(
 module.exports = withLess({
   lessLoaderOptions: {
     javascriptEnabled: true,
-    modifyVars: themeVariables, // make your antd custom effective
+    modifyVars: {'primary-color': '#FFD700'}, // make your antd custom effective
   },
   webpack: (config, { isServer }) => {
     if (isServer) {

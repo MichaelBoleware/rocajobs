@@ -7,19 +7,19 @@ const menu= (
   <Menu >
   <Menu.Item>
     <Link   href="/profile">
-      <a target="_blank" rel="noopener noreferrer">Profile
+      <a>Profile
         </a>
       </Link>
   </Menu.Item>
   <Menu.Item>
     <Link   href="/messages">
-      <a target="_blank" rel="noopener noreferrer">Messages
+      <a>Messages
         </a>
       </Link>
   </Menu.Item> 
   <Menu.Item>
     <Link   href="/applications"> 
-    <a target="_blank" rel="noopener noreferrer">
+    <a>
         Pending applications 
         </a>
         </Link>
@@ -48,7 +48,7 @@ class RightMenu extends Component {
     return (
       <div>
       <Dropdown overlay={menu} placement="bottomLeft">
-          <Button type="primary">Options</Button>
+          <Button size='large' shape= 'round'>Options</Button>
       </Dropdown>
     </div>
     );

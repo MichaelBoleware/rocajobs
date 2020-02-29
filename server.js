@@ -8,6 +8,7 @@ const handle = app.getRequestHandler();app.prepare().then(() => {
  server.get('*', (req, res) => handle(req, res));
  server.listen(port, (err) => {
   if (err) throw err;
-  console.log(`?? on http://localhost:${port}`);
+  console.log(`ROCAjobs ready on http://localhost:${port}`);
  });
 });
+

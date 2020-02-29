@@ -34,7 +34,6 @@ function Hit(props) {
 class HomeBody extends Component {
     render() {
         return (
-          <Content>
               <div css={homeCls}>
                 <div className="ais-InstantSearch">
                   <InstantSearch searchClient={searchClient} indexName="demo_ecommerce">
@@ -44,7 +43,7 @@ class HomeBody extends Component {
                     <RefinementList attribute="brand" />
                     <Configure hitsPerPage={8} />
                   </div>
-                  <div className="right-panel">        
+                  <div className="right-panel">   
                     <SearchBox />
                     <Hits hitComponent={Hit}/>
                     <Pagination />
@@ -52,7 +51,6 @@ class HomeBody extends Component {
                   </InstantSearch>
                 </div>   
             </div>
-            </Content>
     );
 }
 }

@@ -1,13 +1,16 @@
 import Link from 'next/link';
+import React from 'react';
+import Footer from '../components/layout/Footer';
+import ChatContainer from '../components/layout/ChatContainer';
+import Header from '../components/layout/Header';
+import Chat from '../components/layout/Chat';
 
 export default function Messages() {
     return (
-      <div>
-        <Link href="/peoplesearch">
-          <a>Search People</a>
-        </Link>
-        <p>Hello Messages.js</p>
-      </div>
+      <ChatContainer>
+        <Header />
+          <Chat />
+        <Footer />
+      </ChatContainer>
     );
   }
-  
