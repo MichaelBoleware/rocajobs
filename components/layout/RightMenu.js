@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { string } from 'prop-types';
 import Link from 'next/link';
 import { Menu, Dropdown, Button } from 'antd';
 

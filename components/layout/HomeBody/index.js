@@ -1,9 +1,6 @@
-
 import algoliasearch from 'algoliasearch/lite';
 import React, { Component } from 'react';
 import {homeCls} from './styles';
-import Content from '../Content';
-
 import {
     InstantSearch,
     Hits,
@@ -15,7 +12,14 @@ import {
     Configure,
   } from 'react-instantsearch-dom';
 
-const searchClient = algoliasearch('B1G2GM9NG0', 'aadef574be1f9252bb48d4ea09b5cfe5');
+  // configure algolia
+  const searchClient = algoliasearch(
+    process.env.ALGOLIA_APP_ID,
+    process.env.ALGOLIA_API_KEY
+  );
+
+
+const index = process.env.ALGOLIA_JOB_OPENINGS;
 
 function Hit(props) {
   return (
@@ -36,7 +40,7 @@ class HomeBody extends Component {
         return (
               <div css={homeCls}>
                 <div className="ais-InstantSearch">
-                  <InstantSearch searchClient={searchClient} indexName="demo_ecommerce">
+                  <InstantSearch searchClient={searchClient} indexName={index}>
                   <div className="left-panel">
                     <ClearRefinements />
                     <h2>Brands</h2>

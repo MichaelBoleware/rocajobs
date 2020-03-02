@@ -1,11 +1,7 @@
-import HomeBody from '../HomeBody'
 import React, { Component } from 'react';
-import { Button, Drawer } from 'antd';
 import Link from 'next/link';
-import LeftMenu from '../LeftMenu';
 import RightMenu from '../RightMenu';
 import {headerCls} from './styles'
-import { css } from '@emotion/core';
 
 class Header extends Component {
   
@@ -19,9 +15,6 @@ class Header extends Component {
             </Link>
           </div>
           <div className="menuCon">
-            <div className="leftMenu">
-              <LeftMenu />
-            </div>
             <div className="rightMenu">
               <RightMenu />
             </div>

@@ -4,8 +4,8 @@ export const homeCls = css`
     body {  font-family: sans-serif; padding: 1em; }
     .ais-SearchBox { margin: 1em 0; color: black}
     .ais-Pagination { margin-top: 1em;}
-    .left-panel { float: left; width: 260px ;margin-top: 50px}
-    .right-panel { margin-left: 260px}
+    .left-panel { float: left; width: 220px; margin-top: 50px}
+    .right-panel { margin-left: 220px; max-width: calc(70%) }
     .ais-InstantSearch { max-width: calc(90% - 1rem); overflow: hidden; margin: 0 auto }
     .ais-Hitsitem { margin-bottom: 1em;}
     .hit-name { margin-bottom: .5em ; font-size: 24px}

@@ -1,15 +1,20 @@
 /* eslint-disable */
 const withLess = require('@zeit/next-less')
-const lessToJS = require('less-vars-to-js')
-const fs = require('fs')
-const path = require('path')
+const dotEnvResult = require('dotenv').config()
 
-// Where your antd-custom.less file lives
-const themeVariables = lessToJS(
-  fs.readFileSync(path.resolve(__dirname, './assets/antd-custom.less'), 'utf8')
-)
+const prod = process.env.NODE_ENV === 'production'
+
+if (dotEnvResult.error) {
+  throw dotEnvResult.error
+}
 
 module.exports = withLess({
+  env: {
+    ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
+    ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY, //search-only
+    ALGOLIA_JOB_OPENINGS: process.env.ALGOLIA_JOB_OPENINGS,
+    BACKEND_URL: prod ? 'https://api.example.com' : 'https://localhost:3000',
+  },
   lessLoaderOptions: {
     javascriptEnabled: true,
     modifyVars: {'primary-color': '#FFD700'}, // make your antd custom effective

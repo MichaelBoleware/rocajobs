@@ -1,17 +1,12 @@
 import Head from 'next/head';
 import React from 'react';
-import { css } from '@emotion/core';
 import {
  node, string, oneOfType, object
 } from 'prop-types';
 import { Layout } from 'antd';
+import {layoutCls} from './styles'
 
 
-const layoutCls = css`
-background:linear-gradient(transparent,rgb(218,165,32));
-background-color:orange;
-font-family: open-sans;
-`;
 
 const Container = ({
   children, 

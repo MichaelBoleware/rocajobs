@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
-import { css } from '@emotion/core';
+import {nameInputStyles} from './styles'
 
+const searchClient = algoliasearch(
+  process.env.ALGOLIA_APP_ID,
+  process.env.ALGOLIA_API_KEY
+);
     class Chat extends Component {
 
       state = { user: null }
@@ -16,16 +20,7 @@ import { css } from '@emotion/core';
       render() {
         const { user } = this.state;
 
-        const nameInputStyles = css`
-        background: 'transparent'
-        color: '#999'
-        border: 0
-        borderBottom: '1px solid #666'
-        borderRadius: 0
-        fontSize: '3rem'
-        fontWeight: 500
-        boxShadow: 'none !important'
-        `;
+        
         return (
           <Layout css={nameInputStyles} pageTitle="Realtime Chat">
 
