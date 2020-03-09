@@ -10,7 +10,7 @@ export default function Applications() {
       <Container>
         <Header />
         <div>
-          <p>Hello applications!</p>
+          <p>applications page</p>
         </div>
         <Footer />
       </Container>

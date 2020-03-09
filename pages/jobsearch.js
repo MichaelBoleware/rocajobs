@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Content from '../components/layout/Content';
 import Footer from '../components/layout/Footer/Footer';
-import Container from '../components/layout/Container/Container';
 import Header from '../components/layout/Header';
 
 const JobSearch = () => (

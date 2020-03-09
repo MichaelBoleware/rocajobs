@@ -4,12 +4,12 @@ import Container from '../components/layout/Container/Container';
 import Header from '../components/layout/Header';
 import HomeBody from '../components/layout/HomeBody';
 
-const HomePage = () => (
+export default function Home() { 
+  return (
   <Container>
     <Header />
      <HomeBody /> 
     <Footer />
   </Container>
-);
-
-export default HomePage;
+  );
+}

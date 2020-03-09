@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
 import {nameInputStyles} from './styles'
+import algoliasearch from 'algoliasearch/lite';
 
 const searchClient = algoliasearch(
   process.env.ALGOLIA_APP_ID,

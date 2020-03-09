@@ -12,7 +12,7 @@ module.exports = withLess({
   env: {
     ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
     ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY, //search-only
-    ALGOLIA_JOB_OPENINGS: process.env.ALGOLIA_JOB_OPENINGS,
+    ALGOLIA_JOB_OPENINGS: 'JobOpenings',
     BACKEND_URL: prod ? 'https://api.example.com' : 'https://localhost:3000',
   },
   lessLoaderOptions: {

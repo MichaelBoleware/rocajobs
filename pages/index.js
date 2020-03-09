@@ -9,7 +9,7 @@ export default function Index() {
         <Link href="/login">
           <a>login</a>
         </Link>
-        <p>Hello index.js</p>
+        <p>index page (to be removed)</p>
       </div>
     );
   }

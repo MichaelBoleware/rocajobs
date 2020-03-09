@@ -25,10 +25,10 @@ function Hit(props) {
   return (
     <div css="homeCls">
       <div className="hit-name">
-        <Highlight attribute="name" hit={props.hit} />
+        <Highlight attribute="JobOpening_ID" hit={props.hit} />
       </div>
       <div className="hit-description">
-        <Highlight attribute="description" hit={props.hit} />
+        <Highlight attribute="Description" hit={props.hit} />
       </div>
     </div>
   );
@@ -43,8 +43,12 @@ class HomeBody extends Component {
                   <InstantSearch searchClient={searchClient} indexName={index}>
                   <div className="left-panel">
                     <ClearRefinements />
-                    <h2>Brands</h2>
-                    <RefinementList attribute="brand" />
+                    <h2>Salary</h2>
+                    <RefinementList attribute="Salary" />
+                    <h2>State</h2>
+                    <RefinementList attribute="State" />
+                    <h2>Level of Education</h2>
+                    <RefinementList attribute="LevelEducation" />
                     <Configure hitsPerPage={8} />
                   </div>
                   <div className="right-panel">   

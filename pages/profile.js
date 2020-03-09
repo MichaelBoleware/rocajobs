@@ -10,7 +10,7 @@ export default function Profile() {
       <Container>
         <Header />
         <div>
-          <p>Hello profile!</p>
+          <p>profile page</p>
         </div>
         <Footer />
       </Container>
