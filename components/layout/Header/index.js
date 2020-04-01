@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-import RightMenu from '../RightMenu';
-import {headerCls} from './styles'
+import RightMenu from './RightMenu';
+import {headerCls} from './styles';
+import {connect} from 'react-redux';
 
 class Header extends Component {
   
@@ -11,7 +12,7 @@ class Header extends Component {
         <nav className="menuBar">
           <div className="logo">
             <Link href="/home">
-              <img src="/images/logo.jpg" alt="logo" />
+              <img src="/images/logo.jpg" alt={this.props.username} />
             </Link>
           </div>
           <div className="menuCon">
@@ -25,6 +26,13 @@ class Header extends Component {
     
   }
 }
+function mapStateToProps(state){
+  return {
+      username: state.username,
+      photourl: state.photourl,
+      uid: state.uid,
+      username: state.displayName
+  }
+}
 
-
-export default Header;
+export default connect(mapStateToProps)(Header);

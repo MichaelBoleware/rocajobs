@@ -12,6 +12,7 @@ import {
     Configure,
   } from 'react-instantsearch-dom';
 
+
   // configure algolia
   const searchClient = algoliasearch(
     process.env.ALGOLIA_APP_ID,

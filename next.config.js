@@ -10,6 +10,14 @@ if (dotEnvResult.error) {
 
 module.exports = withLess({
   env: {
+    FIREBASE_apiKey: process.env.FIREBASE_apiKey,
+    FIREBASE_authDomain: process.env.FIREBASE_authDomain,
+    FIREBASE_databaseURL: process.env.FIREBASE_databaseURL,
+    FIREBASE_projectId: process.env.FIREBASE_projectId,
+    FIREBASE_storageBucket: process.env.FIREBASE_storageBucket,
+    FIREBASE_messagingSenderId: process.env.FIREBASE_messagingSenderId,
+    FIREBASE_appId: process.env.FIREBASE_appId,
+    FIREBASE_measurementId: process.env.FIREBASE_measurementId,
     ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
     ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY, //search-only
     ALGOLIA_JOB_OPENINGS: 'JobOpenings',

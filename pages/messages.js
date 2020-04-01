@@ -1,18 +1,20 @@
 import Link from 'next/link';
-import React from 'react';
-import Footer from '../components/layout/Footer/Footer';
-import ChatContainer from '../components/layout/ChatContainer/ChatContainer';
+import React, { useContext } from 'react';
+import Footer from '../components/layout/Footer';
+import Container from '../components/layout/Container';
 import Header from '../components/layout/Header';
-import Chat from '../components/layout/Chat';
+import Chat from '../components/Chat';
+import UserContext from '../components/UserContext';
 
 
 
 export default function Messages() {
+  console.log(useContext(UserContext));
     return (
-      <ChatContainer>
+      <Container>
         <Header />
-          <Chat />
+          <Chat user={useContext(UserContext)}/>
         <Footer />
-      </ChatContainer>
+      </Container>
     );
   }
